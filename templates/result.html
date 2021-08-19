@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>sentiment detector for movie review</h2>
+		
+	</div>
+	</header>
+	<p text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 >positive</h2>
+	{% elif prediction == 0%}
+	<h2 >Not a positive (It is a negative)</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
