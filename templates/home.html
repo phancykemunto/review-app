@@ -1,37 +1,41 @@
-<<!DOCTYPE html>
-<html>
-<head>
-	<title>Movie sentiment analysis</title>
-	
-</head>
-<body>
+<!DOCTYPE html>
 
-	<header>
-		<div class="container">
-		<div id="brandname">
-			Machine Learning App with Flask
-		</div>
-		<h2>sentiment detector for reviews</h2>
-		
-	</div>
-	</header>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Movie Reviews Sentiment Analysis</title>
+        #<link rel="shortcut icon" href="{{ url_for('static', filename='food-favicon.ico') }}">
+        #<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        #<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        #<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
 
-	<div class="ml-container">
+    <body>
 
-		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Your Message Here</p>
-		<!-- <input type="text" name="comment"/> -->
-		<textarea name="Review"></textarea>
-		<br/>
+        
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">MOVIE REVIEW SENTIMENT ANALYSIS</h2>
+            <div class='description'>
+    			<p>Please write your review in the box </p>
+    		</div>
+    	
 
-		<input type="submit" class="btn-info" value="predict">
-		
-	</form>
-		
-	</div>
+        
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea class='Review-box' name="Review"  placeholder="Enter Your Review Here...  "></textarea><br/>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
 
-	
-	
+       
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/phancykemunto"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href=""><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>© PHANICE KEMUNTO 2021</p>
+       </div>
 
-</body>
+    </body>
 </html>

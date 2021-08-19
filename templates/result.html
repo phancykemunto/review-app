@@ -1,32 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-    
-</head>
-<body>
 
-	<header>
-		<div class="container">
-		<div id="brandname">
-			ML App
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        <title>Movie Reviews Sentiment Analysis</title>
+        #<link rel="shortcut icon" href="{{ url_for('static', filename='food-favicon.ico') }}">
+        #<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        #<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        #<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+
+		
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">MOVIE REVIEW SENTIMENT ANALYSIS</h2>
+            <div class='description'>
+    			<p>Let's see whether people reviewed your movie to be positive or negative</p>
+    		</div>
+    	
+
+		
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='safe'>positive</span></h1>
+				#<img class="gif" src="{{ url_for('static', filename='positive-review.webp') }}" alt="Positive Review">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='danger'>negative</span></h1>
+				#<img class="gif" src="{{ url_for('static', filename='negative-review.webp') }}" alt="Negative Review">
+			{% endif %}
 		</div>
-		<h2>sentiment predictor for moview review</h2>
-		
-	</div>
-	</header>
-	<p text-align: center;"><b>Results for Comment</b></p>
-	<div class="results">
-
 
 		
-	{% if prediction == 1%}
-	<h2 >positive</h2>
-	{% elif prediction == 0%}
-	<h2 >Not a positive (It is a negative)</h2>
-	{% endif %}
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/phancykemunto"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href=""><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>©  PHANICE KEMUNTO 2021/p>
+       </div>
 
-	</div>
-
-</body>
+    </body>
 </html>
